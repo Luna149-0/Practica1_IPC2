@@ -8,6 +8,7 @@ namespace Practica1_IPC2
 {
     internal abstract class Mascota
     {
+        private static int contador = 0;
         // ----- Atributos de Mascota -----
         private string nombre;
         private double peso;
@@ -79,29 +80,21 @@ namespace Practica1_IPC2
             this.enfermo = false; 
         }
 
-        // ----- código único de 8 caracteres alfanuméricos -----
+        //CODIGO
         private string GenerarCodigo()
         {
-            const string caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-            Random rnd = new Random(Guid.NewGuid().GetHashCode());
-            char[] resultado = new char[8];
-
-            for (int i = 0; i < 8; i++)
-            {
-                resultado[i] = caracteres[rnd.Next(caracteres.Length)];
-            }
-
-            return new string(resultado);
+            contador++; 
+            return contador.ToString("D8"); 
         }
 
-        // ----- Métodos -----
+        // METODOS
 
-        // Cambia el estado entre enfermo y sano
+        // VE SI ESTA ENFERMO O SAMO
         public void CambiarEstado()
         {
             enfermo = !enfermo;
         }
-
+        //CALCULO DE DOSIS
         public abstract double CalcularDosis(double dosisPorKg);
 
 

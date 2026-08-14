@@ -8,7 +8,7 @@ namespace Practica1_IPC2
 {
     internal class Ave: Mascota
     {
-        // Atributos propios de Ave
+        // Atributos de Ave
         public double EnvergaduraAlas { get; set; } // en cm
         public bool PuedeVolar { get; set; }
 
@@ -21,7 +21,6 @@ namespace Practica1_IPC2
             PuedeVolar = puedeVolar;
         }
 
-        // POLIMORFISMO: factor de ajuste del 50%
         public override double CalcularDosis(double dosisPorKg)
         {
             return Peso * dosisPorKg * 0.50;

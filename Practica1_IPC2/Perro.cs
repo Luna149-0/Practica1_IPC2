@@ -8,7 +8,7 @@ namespace Practica1_IPC2
 {
     internal class Perro: Mascota
     {
-        // Atributos propios de Perro 
+        // Atributos  de Perro 
         public string Raza { get; set; }
         public string Tamano { get; set; }
 
@@ -21,15 +21,14 @@ namespace Practica1_IPC2
             Tamano = tamano;
         }
 
-        // POLIMORFISMO
         public override double CalcularDosis(double dosisPorKg)
         {
-            return Peso * dosisPorKg; // dosis estándar, sin ajuste
+            return Peso * dosisPorKg; // dosis 
         }
 
         public override void MostrarInformacion()
         {
-            base.MostrarInformacion(); // reutiliza la info general de Mascota
+            base.MostrarInformacion(); 
             Console.WriteLine($"Especie     : Perro");
             Console.WriteLine($"Raza        : {Raza}");
             Console.WriteLine($"Tamaño      : {Tamano}");

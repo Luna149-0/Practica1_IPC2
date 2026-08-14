@@ -8,7 +8,7 @@ namespace Practica1_IPC2
 {
     internal class Tortuga: Mascota
     {
-        // Atributos propios de Tortuga
+        // Atributos de Tortuga
         public string TipoCaparazon { get; set; }
         public bool EsAcuatica { get; set; }
 
@@ -21,7 +21,6 @@ namespace Practica1_IPC2
             EsAcuatica = esAcuatica;
         }
 
-        // POLIMORFISMO: factor de ajuste del 80%
         public override double CalcularDosis(double dosisPorKg)
         {
             return Peso * dosisPorKg * 0.80;

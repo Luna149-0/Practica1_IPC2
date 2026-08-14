@@ -8,7 +8,7 @@ namespace Practica1_IPC2
 {
     internal class Gato:Mascota
     {
-        // Atributos propios de Gato
+        // Atributos de Gato
         public string Raza { get; set; }
         public bool Esterilizado { get; set; }
 
@@ -21,7 +21,6 @@ namespace Practica1_IPC2
             Esterilizado = esterilizado;
         }
 
-        // POLIMORFISMO: factor de ajuste del 90%
         public override double CalcularDosis(double dosisPorKg)
         {
             return Peso * dosisPorKg * 0.90;
